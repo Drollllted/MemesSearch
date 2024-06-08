@@ -8,10 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var apiRequest = APIRequest.shared
+    private var memesView: MemesView!
+    
+    override func loadView() {
+        memesView = MemesView()
+        view = memesView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBackground
+        
+        apiRequest.getMemes()
     }
 
 

@@ -3,24 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD1037F02C10790C00686701 /* MemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1037EF2C10790C00686701 /* MemesView.swift */; };
+		DD1037F22C108A1F00686701 /* JSONCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1037F12C108A1F00686701 /* JSONCaller.swift */; };
+		DD1037F62C14D66B00686701 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1037F52C14D66B00686701 /* APIRequest.swift */; };
 		DD2049F02C0E2560001A1BD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2049EF2C0E2560001A1BD8 /* AppDelegate.swift */; };
 		DD2049F22C0E2560001A1BD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2049F12C0E2560001A1BD8 /* SceneDelegate.swift */; };
 		DD2049F42C0E2560001A1BD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2049F32C0E2560001A1BD8 /* ViewController.swift */; };
-		DD2049F72C0E2560001A1BD8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DD2049F62C0E2560001A1BD8 /* Base */; };
 		DD2049F92C0E2564001A1BD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2049F82C0E2564001A1BD8 /* Assets.xcassets */; };
 		DD2049FC2C0E2564001A1BD8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DD2049FB2C0E2564001A1BD8 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD1037EF2C10790C00686701 /* MemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesView.swift; sourceTree = "<group>"; };
+		DD1037F12C108A1F00686701 /* JSONCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCaller.swift; sourceTree = "<group>"; };
+		DD1037F52C14D66B00686701 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		DD2049EC2C0E2560001A1BD8 /* MemesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2049EF2C0E2560001A1BD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD2049F12C0E2560001A1BD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DD2049F32C0E2560001A1BD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DD2049F62C0E2560001A1BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD2049F82C0E2564001A1BD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD2049FB2C0E2564001A1BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD2049FD2C0E2564001A1BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,10 +63,12 @@
 				DD2049EF2C0E2560001A1BD8 /* AppDelegate.swift */,
 				DD2049F12C0E2560001A1BD8 /* SceneDelegate.swift */,
 				DD2049F32C0E2560001A1BD8 /* ViewController.swift */,
-				DD2049F52C0E2560001A1BD8 /* Main.storyboard */,
 				DD2049F82C0E2564001A1BD8 /* Assets.xcassets */,
 				DD2049FA2C0E2564001A1BD8 /* LaunchScreen.storyboard */,
 				DD2049FD2C0E2564001A1BD8 /* Info.plist */,
+				DD1037EF2C10790C00686701 /* MemesView.swift */,
+				DD1037F12C108A1F00686701 /* JSONCaller.swift */,
+				DD1037F52C14D66B00686701 /* APIRequest.swift */,
 			);
 			path = MemesSearch;
 			sourceTree = "<group>";
@@ -103,7 +109,7 @@
 				};
 			};
 			buildConfigurationList = DD2049E72C0E2560001A1BD8 /* Build configuration list for PBXProject "MemesSearch" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -127,7 +133,6 @@
 			files = (
 				DD2049F92C0E2564001A1BD8 /* Assets.xcassets in Resources */,
 				DD2049FC2C0E2564001A1BD8 /* Base in Resources */,
-				DD2049F72C0E2560001A1BD8 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1037F22C108A1F00686701 /* JSONCaller.swift in Sources */,
 				DD2049F42C0E2560001A1BD8 /* ViewController.swift in Sources */,
+				DD1037F02C10790C00686701 /* MemesView.swift in Sources */,
 				DD2049F02C0E2560001A1BD8 /* AppDelegate.swift in Sources */,
+				DD1037F62C14D66B00686701 /* APIRequest.swift in Sources */,
 				DD2049F22C0E2560001A1BD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +155,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DD2049F52C0E2560001A1BD8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD2049F62C0E2560001A1BD8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DD2049FA2C0E2564001A1BD8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +297,6 @@
 				INFOPLIST_FILE = MemesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +324,6 @@
 				INFOPLIST_FILE = MemesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
