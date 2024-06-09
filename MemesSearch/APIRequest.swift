@@ -28,9 +28,8 @@ class APIRequest{
             do{
                 let jsonDecoder = JSONDecoder()
                 let json = try jsonDecoder.decode(JSONCaller.self, from: data)
-               // print(json.data.memes)
                 let urlImage = json.data.memes.randomElement()?.url
-                print(json.data.memes.randomElement()?.url)
+             //   print(urlImage)
                 completion(urlImage)
             } catch {
                 print(error.localizedDescription)
