@@ -9,12 +9,12 @@ import Foundation
 
 struct JSONCaller: Codable{
     let success: Bool
-    let data: [Memes]
+    let data: DataMemes
 }
 
-//struct DataMemes: Codable{
-//    let memes: [Memes]
-//}
+struct DataMemes: Codable{
+    let memes: [Memes]
+}
 
 
 struct Memes: Codable{

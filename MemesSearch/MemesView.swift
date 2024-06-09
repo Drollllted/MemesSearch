@@ -54,16 +54,32 @@ class MemesView: UIView {
     
     lazy var likeButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
+        button.setImage(UIImage(named: "like"), for: .normal)
         button.backgroundColor = UIColor.green
         button.tintColor = .yellow
         button.layer.cornerRadius = 10
         
         button.translatesAutoresizingMaskIntoConstraints = false
         
+        button.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        
         return button
     }()
     
+    lazy var dislikeButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "dislike"), for: .normal)
+        button.backgroundColor = .green
+        button.layer.cornerRadius = 10
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        return button
+    }()
     
     
     //MARK: - LifeCycles
@@ -77,6 +93,9 @@ class MemesView: UIView {
         
         setMemesImage()
         
+        setLikeButton()
+        
+        setDislikeButton()
     }
     
     required init?(coder: NSCoder) {
@@ -119,8 +138,18 @@ class MemesView: UIView {
         addSubview(likeButton)
         
         NSLayoutConstraint.activate([
-            
+            likeButton.topAnchor.constraint(equalTo: memesImage.bottomAnchor, constant: 20),
+            likeButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
         
+        ])
+    }
+    
+    private func setDislikeButton() {
+        addSubview(dislikeButton)
+        
+        NSLayoutConstraint.activate([
+            dislikeButton.topAnchor.constraint(equalTo: memesImage.bottomAnchor, constant: 20),
+            dislikeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50)
         ])
     }
     

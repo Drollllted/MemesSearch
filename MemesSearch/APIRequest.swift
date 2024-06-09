@@ -13,14 +13,14 @@ class APIRequest{
     
     private init(){}
     
-    func getMemes() {
+    func getMemes(completion: @escaping (String?) -> Void) {
         let urlString = "https://api.imgflip.com/get_memes"
         
         guard let url = URL(string: urlString) else {return}
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let error = error else {
-                print(error)
+            guard error == nil else {
+                print(error?.localizedDescription ?? "Unknown error")
                 return
             }
             
@@ -28,9 +28,12 @@ class APIRequest{
             do{
                 let jsonDecoder = JSONDecoder()
                 let json = try jsonDecoder.decode(JSONCaller.self, from: data)
-                //print(json)
+               // print(json.data.memes)
+                let urlImage = json.data.memes.randomElement()?.url
+                print(json.data.memes.randomElement()?.url)
+                completion(urlImage)
             } catch {
-                print(error)
+                print(error.localizedDescription)
             }
             
             
